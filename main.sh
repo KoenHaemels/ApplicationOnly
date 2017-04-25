@@ -9,6 +9,9 @@ sudo apt-get install php libapache2-mod-php -y
 sudo rm -f /var/www/html/* -r
 sudo cp /var/ApplicationOnly/WorkingSite/* /var/www/html/ -r -f
 
-sudo apt-get update && sudo apt-get upgrade -y
-chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'
-/usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync
+sudo apt-get update
+sudo apt-get install walinuxagent
+sudo waagent -force -deprovision
+export HISTSIZE=0
+logout
+
