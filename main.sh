@@ -1,6 +1,6 @@
 #!/bin/bash
 #Main script
-chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'
+sudo chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'
 sudo apt-get update && sudo apt-get upgrade -y
 
 /usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync
