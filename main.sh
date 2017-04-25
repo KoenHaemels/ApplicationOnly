@@ -10,5 +10,5 @@ sudo rm -f /var/www/html/* -r
 sudo cp /var/ApplicationOnly/WorkingSite/* /var/www/html/ -r -f
 
 sudo apt-get update && sudo apt-get upgrade -y
-sudo chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'
+chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'
 /usr/sbin/waagent -force -deprovision+user && export HISTSIZE=0 && sync
