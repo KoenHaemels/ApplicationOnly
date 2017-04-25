@@ -13,5 +13,5 @@ sudo apt-get update
 sudo apt-get install walinuxagent
 sudo waagent -force -deprovision
 export HISTSIZE=0
-logout
+exit
 
