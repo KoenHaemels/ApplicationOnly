@@ -8,10 +8,3 @@ sudo apt-get install php libapache2-mod-php -y
 #Clear any docs in /html and copy docs from Application into /html
 sudo rm -f /var/www/html/* -r
 sudo cp /var/ApplicationOnly/WorkingSite/* /var/www/html/ -r -f
-
-sudo apt-get update
-sudo apt-get install walinuxagent
-sudo waagent -force -deprovision
-export HISTSIZE=0
-exit
-
