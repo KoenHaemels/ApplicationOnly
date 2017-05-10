@@ -1,6 +1,6 @@
 
 <?php
-$target_dir = "/var/InstallationApplication/bucket/";
+$target_dir = "/var/InstallationApplicationAWS/bucket/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -42,5 +42,6 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+header( "refresh:5;url=index.php" );
 ?>
 
